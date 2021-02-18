@@ -50,14 +50,58 @@ def on_jarkeva(syote, alaraja, ylaraja):
     # Tarkistetaan, ettei syöte ole ylärajan yläpuolella
     try:
         if luku > ylaraja:
-            raise Exception('Syöttämäsi arvo on yli sallitus')
+            raise Exception('Syöttämäsi arvo on yli sallitun')
     except Exception as virheilmoitus:
         print(virheilmoitus)
     
     # Palautetaan luku
     return luku
 
+def liukuluku_ok(syote, alaraja, ylaraja):
+    """Tarkistaa syötteen olevan numeerinen ja muuttaa sen liukuluvuksi. Syötteellä on alaraja ja yläraja
+    
+    Args:
+        syote (string): Syötteenä saatu arvo
+        alaraja (float): pienin hyväksyttävä arvo
+        ylaraja (float): suurin hyväksyttävä arvo
 
-# Testataan toimintaa
-tulos = on_jarkeva('sata', 1, 500)
-print(tulos)
+    Returns:
+        list: Palauttaa arvon (float), virhekoodin (int), virhesanoman (string)
+    """
+    # Puhdistetaan syötteestä ylimääriset merkit (white space)
+    puhdistettumerkkijono = syote.strip()
+
+    # Tutkitaan onko syötteessä pilkku ja etsitään sen paikka
+    pilkunpaikka = puhdistettumerkkijono.find(',')
+
+    # Jos pilkku löytyi, korvataan pisteellä
+    if pilkunpaikka != -1: # Jos ei löydy indeksi on aina -1
+        numeroarvo = puhdistettumerkkijono.replace(',', '.') # Muutetaan
+    else:
+        numeroarvo = puhdistettumerkkijono # ei muuteta
+
+    # Etsitään desimaalipistettä merkkijonosta
+    pisteenpaikka = numeroarvo.find('.')
+
+    # Jos desimaalipiste löytyy, jaetaan pisteen kohdalta erillisiksi merkkijoiksi
+    if pisteenpaikka != -1:
+        osat = numeroarvo.split('.') # Syntyy lista osista
+        osien_maara = len(osat)
+        if osien_maara > 2:
+            virhekoodi = 1
+            virhesanoma = "Syötteessä on useita desimaalipisteitä tai useita arvoja: vain yksi liukuluku on sallittu"
+            arvo = 0
+        #TODO: tee osien numeerisuus testi valmiiksi
+        # elif condition:
+            
+    tulokset = None
+    return tulokset
+    
+# Jos sanity.py-tiedostoa ajetaan terminaalissa, suoritetaan testit
+if __name__ == '__main__':
+    
+    # Testataan toimintaa
+    tulos = on_jarkeva('sata', 1, 500)
+    print(tulos)
+syote = ' 10.5   '
+print(syote.strip(), 'kiloa')
