@@ -105,3 +105,5 @@ if __name__ == '__main__':
     print(tulos)
 syote = ' 10.5   '
 print(syote.strip(), 'kiloa')
+
+# Testa
