@@ -1,6 +1,14 @@
-# Tiivistetty versio Sanity.py-modulista eli suurinpiirtein se mitä tuhosin vahingossa
+# Tiivistetty versio Sanity.py-modulista eli suurinpiirtein se, mitä tuhosin vahingossa
 
 def liukuluvuksi(syote):
+    """Tarkistaa syötteen ja muuttaa sen liukuluvuksi
+
+    Args:
+        syote (string): Käyttäjän syöttämä arvo
+
+    Returns:
+        list: virhekoodi, virhesanoma ja syöte liukulukuna
+    """
 
     # Asetetaan palautusarvojen oletukset
     virhekoodi = 0
