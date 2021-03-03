@@ -89,21 +89,51 @@ def liukuluku_ok(syote, alaraja, ylaraja):
         osien_maara = len(osat)
         if osien_maara > 2:
             virhekoodi = 1
-            virhesanoma = "Syötteessä on useita desimaalipisteitä tai useita arvoja: vain yksi liukuluku on sallittu"
+            virhesanoma = "Syötteessä on useita desimaalipisteitä tai useita arvoja: vain yksi liukuluku on sallittu, esim 12.3"
             arvo = 0
-        #TODO: tee osien numeerisuus testi valmiiksi
-        # elif condition:
+    
+        else:
+            osa = str(osat[0])
+            if osa.isnumeric() == False:
+                virhekoodi = 2
+                virhesanoma = "Syöte sisältää tekstiä, ainoastaan numerot ja desimaalipiste ovat sallittuja, esim. 123.5"
+                arvo = 0
+            else:
+                osa = str(osat[1])
+                if osa.isnumeric() == False:
+                    virhekoodi = 2
+                    virhesanoma = "Syöte sisältää tekstiä, ainoastaan numerot ja desimaalipiste ovat sallittuja, esim. 123.5"
+                    arvo = 0
+                
+                else:
+                    virhekoodi = 0
+                    virhesanoma = "Syöte OK"
+                    arvo = float(numeroarvo)
+    
+    elif numeroarvo.isnumeric() == False:
+        virhekoodi = 2
+        virhesanoma = "Syöte sisältää tekstiä, ainoastaan numerot ja desimaalipiste ovat sallittuja, esim. 123.5"
+        arvo = 0
+        
+    else:    
+        virhekoodi = 0
+        virhesanoma = "Syöte OK"
+        arvo = float(numeroarvo)
+        
+                    
+                
             
-    tulokset = None
+    tulokset = [virhekoodi, virhesanoma, arvo]
     return tulokset
     
 # Jos sanity.py-tiedostoa ajetaan terminaalissa, suoritetaan testit
 if __name__ == '__main__':
     
-    # Testataan toimintaa
-    tulos = on_jarkeva('sata', 1, 500)
-    print(tulos)
-syote = ' 10.5   '
-print(syote.strip(), 'kiloa')
+#     Testataan toimintaa
+#     tulos = on_jarkeva('sata', 1, 500)
+#     print(tulos)
+# syote = ' 10.5   '
+# print(syote.strip(), 'kiloa')
 
-# Testa
+    syote = 'sata'
+    print(liukuluku_ok(syote, 0, 500))
