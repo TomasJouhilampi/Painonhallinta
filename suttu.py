@@ -1,3 +1,5 @@
+# Tiedosto ideoiden testaamiseen
+
 # Testataan merkkijonoa numeroarvo
 numeroarvo = '123.45'
 print('Tutkittava numeerinen merkkijono on:', numeroarvo)
