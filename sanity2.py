@@ -118,7 +118,8 @@ if __name__ == '__main__':
     # Syöte kokonaisuudessaan tekstiä
     syote = 'sataviisi'
     print('Syöte:', syote, 'Tulokset: ', liukuluvuksi(syote))
-    
+
+    '''
     # Rajatarkistukset
 
     alaraja = 1
@@ -135,3 +136,4 @@ if __name__ == '__main__':
     # 3. Yli ylärajan
     arvo = 1.8
     print('Arvo:', arvo, 'Tulokset:', rajatarkistus(arvo, alaraja, ylaraja))
+    '''
