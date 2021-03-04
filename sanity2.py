@@ -20,7 +20,7 @@ def liukuluvuksi(syote):
 
     # Selvitetään sisältääko syöte mahdollisen desimaalipilkun ja korvataan se pisteellä
     if syote.find(',') != -1:
-        syote.replace(',', '.')
+        syote = syote.replace(',', '.')
 
     # Selvitetään sisältääkö syöte desimaalipisteen ja jaetaan syöte pisteen kohdalta useammaksi merkkijonoksi
     if syote.find('.') != -1:
@@ -95,7 +95,7 @@ def rajatarkistus(arvo, alaraja, ylaraja):
 
 # Funktioiden testaus
 if __name__ == '__main__':
-    
+    '''
     # 1. Syötteen tarkistus, syöte oikein
     syote = '123.5'
     print('Syöte:', syote, 'Tulokset: ', liukuluvuksi(syote))
@@ -134,6 +134,6 @@ if __name__ == '__main__':
     print('Arvo:', arvo, 'Tulokset:', rajatarkistus(arvo, alaraja, ylaraja))
 
     # 3. Yli ylärajan
-    arvo = 1.8
+    arvo = 3.8
     print('Arvo:', arvo, 'Tulokset:', rajatarkistus(arvo, alaraja, ylaraja))
-    '''
+    
