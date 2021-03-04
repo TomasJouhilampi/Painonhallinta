@@ -61,3 +61,26 @@ def liukuluvuksi(syote):
     # Muodostetaan funktion paluuarvo ja palautetaan se
     paluuarvo = [virhekoodi, virhesanoma, arvo]
     return paluuarvo
+
+    
+# Funktio, jolla tarkistetaan, että syötetty arvo on haluttujen rajojen sisällä
+def rajatarkistus(arvo, alaraja, ylaraja):
+    """Tarkistaa, että syötetty arvo on suurempi tai yhtäsuuri kuin alaraja ja pienempi tai yhtäsuuri kuin yläraja
+
+    Args:
+        arvo (float): tarkistettava arvo
+        alaraja (float): pienin sallittu arvo
+        ylaraja (float): suurin sallittu arvo
+
+    Returns:
+        list: virhekoodi, virheilmoitus
+    """
+    # Määritellään
+    virhekoodi = 0
+    virhesanoma = 'Arvo OK'
+
+
+    paluuarvo = [virhekoodi, virhesanoma]
+    return paluuarvo
+
+    
