@@ -95,7 +95,7 @@ def rajatarkistus(arvo, alaraja, ylaraja):
 
 # Funktioiden testaus
 if __name__ == '__main__':
-    '''
+    
     # 1. Syötteen tarkistus, syöte oikein
     syote = '123.5'
     print('Syöte:', syote, 'Tulokset: ', liukuluvuksi(syote))
@@ -119,7 +119,7 @@ if __name__ == '__main__':
     syote = 'sataviisi'
     print('Syöte:', syote, 'Tulokset: ', liukuluvuksi(syote))
 
-    '''
+    
     # Rajatarkistukset
 
     alaraja = 1
