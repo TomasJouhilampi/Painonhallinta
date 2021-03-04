@@ -20,15 +20,19 @@ while True:
 
         # Katsotaan onko virhekoodi 0, ja tallennetaan arvo muuttujaan paino
         if tulokset[0] == 0:
+
+            # TODO: lisää raja-arvotarkistukset
             paino = tulokset[2]
             tapahtui_virhe = False
 
         # Jos virhekoodi ei ole 0, tulostetaan virheilmoitus    
         else:
             print(tulokset[1])
-            
+
     # Testi
     print('Ja paino oli', paino, 'kg')
+
+    # TODO: Muille tiedoille vastaavat kyselysilmukat
               
     '''
     pituus_str = input('Pituus (m)? ')

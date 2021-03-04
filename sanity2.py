@@ -89,6 +89,8 @@ def rajatarkistus(arvo, alaraja, ylaraja):
         virhekoodi = 2
         virhesanoma = 'Arvo on yli ylärajan'
 
+    # TODO: Lisätään virheilmoituksiin ala- ja ylärajan arvot näkyviin
+
     # Paluuarvon määritys ja palautus
     paluuarvo = [virhekoodi, virhesanoma]
     return paluuarvo
