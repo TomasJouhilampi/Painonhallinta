@@ -22,33 +22,18 @@ while True:
         if tulokset[0] == 0:
             paino = tulokset[2]
             tarkistettu_paino = sanity2.rajatarkistus(paino, 40, 300)
-
+            
             # Katsotaan onko arvo sallittujen rajojen sisällä tutkimalla virhekoodia
             if tarkistettu_paino[0] == 0:
                 tapahtui_virhe = False
             else:
                 # Tulostetaan virheimoitus 
                 print(tarkistettu_paino[1])
-                
-
-
-            
-
+                            
         # Jos virhekoodi ei ole 0, tulostetaan virheilmoitus    
         else:
             print(tulokset[1])
 
-    # Testi
-    print('Ja paino oli', paino, 'kg')
-
-    # TODO: Muille tiedoille vastaavat kyselysilmukat
-              
-    '''
-    pituus_str = input('Pituus (m)? ')
-    pituus = 
-
-    print('Painoindeksisi on', bmi(paino, pituus))
-    '''
     # Poistuminen ikuisesta silmukasta
     uusi = input('Lasketaanko uuden henkilön rasvaprosentti? (K/E)')
     if uusi == 'E':
