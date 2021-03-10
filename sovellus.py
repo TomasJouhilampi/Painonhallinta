@@ -20,10 +20,19 @@ while True:
 
         # Katsotaan onko virhekoodi 0, ja tallennetaan arvo muuttujaan paino
         if tulokset[0] == 0:
-
-            # TODO: lisää raja-arvotarkistukset
             paino = tulokset[2]
-            tapahtui_virhe = False
+            tarkistettu_paino = sanity2.rajatarkistus(paino, 40, 300)
+
+            # Katsotaan onko arvo sallittujen rajojen sisällä tutkimalla virhekoodia
+            if tarkistettu_paino[0] == 0:
+                tapahtui_virhe = False
+            else:
+                # Tulostetaan virheimoitus 
+                print(tarkistettu_paino[1])
+                
+
+
+            
 
         # Jos virhekoodi ei ole 0, tulostetaan virheilmoitus    
         else:
