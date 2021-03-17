@@ -49,6 +49,6 @@ def test_liukuluku_kirjaimia_alussa():
 
 # Syöte pelkkää tekstiä, ei numeroita: Virhe
 def test_liukuluku_tekstia():
-    assert sanity2.liukuluvuksi('sata') == [0, 'Syöte OK', 15.0]
+    assert sanity2.liukuluvuksi('sata') == [2, 'Syötteessä ylimäärisiä merkkejä: vain numerot ja desimaalipiste tai pilkku on sallittu', 0]
 
 
