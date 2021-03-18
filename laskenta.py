@@ -4,6 +4,7 @@
 
 # Painoindeksi
 def bmi(paino, pituus):
+    # FIXME: Seuraava selitys virheellinen
     """Laskee painoindeksin kaavalla paino jaettuna pituuden neliöllä
 
     Args:
