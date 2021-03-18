@@ -3,6 +3,7 @@
 # Kirjastojen ja modulien käyttöönotot
 import sanity2
 import laskenta
+import kysymys
 
 # Varsinaisen pääohjelman alku
 
@@ -33,7 +34,9 @@ while True:
         else:
             print(tulokset[1])
 
-    # Kysytään käyttäjältä pituutta, kunnes saadaan järkevä arvo, huom sentteinä
+    pituus = kysymys.kysy_liukuluku('Pituus (cm)', 100, 300)
+
+    ''' # Kysytään käyttäjältä pituutta, kunnes saadaan järkevä arvo, huom sentteinä
     tapahtui_virhe = True
     while tapahtui_virhe == True:
         pituus_str = input('Pituus (cm)? ')
@@ -53,7 +56,7 @@ while True:
                             
         # Jos virhekoodi ei ole 0, tulostetaan virheilmoitus    
         else:
-            print(tulokset[1])
+            print(tulokset[1]) '''
 
     # Kysytään ikää kunnes saadaan järkevä vastaus
     tapahtui_virhe = True
