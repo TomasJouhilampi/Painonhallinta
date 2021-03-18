@@ -20,28 +20,38 @@ def kysy_liukuluku(kysymys, alaraja, ylaraja):
     tapahtui_virhe = True
 
     while tapahtui_virhe == True:
+
+        # Esitetään parametrina annettu kysymys ja tallennetaan vastaus (merkkijono) muuttujaan
         vastaus_str = input(kysymys + ' ')
+
+        # Tarkistetaan syötteen järkevyys, virhetiedot ja arvo listamuuttujaan tulokset
         tulokset = sanity2.liukuluvuksi(vastaus_str)
 
-        # Katsotaan onko virhekoodi 0, ja tallennetaan arvo muuttujaan paino
+        # Katsotaan onko virhekoodi 0, ja tallennetaan arvo muuttujaan vastaus
         if tulokset[0] == 0:
             vastaus = tulokset[2]
-            tarkistettu_vastaus = sanity2.rajatarkistus(vastaus, alaraja, ylaraja)
+
+            # Tehdään raja-arvotarkistus, virhetiedot muuttujaan tarkistusviesti
+            tarkistus_viesti = sanity2.rajatarkistus(vastaus, alaraja, ylaraja)
             
             # Katsotaan onko arvo sallittujen rajojen sisällä tutkimalla virhekoodia
-            if tarkistettu_vastaus[0] == 0:
+            if tarkistus_viesti[0] == 0:
                 tapahtui_virhe = False
                 luku = vastaus
 
             else:
-                print(tarkistettu_vastaus[1])
+                # Jos raja-arvotarkistuksen virhekoodi ei ole 0, tulostetaan virheilmoitus
+                print(tarkistus_viesti[1])
 
-        # Jos virhekoodi ei ole 0, tulostetaan virheilmoitus    
+        # Jos liukulukutarkistuksen virhekoodi ei ole 0, tulostetaan virheilmoitus    
         else:
             print(tulokset[1])
 
     return luku
 
+# TODO: Tähän funktio, jolla tarkitetaan, että syöte on tekstiä
+
+# Koodauksen aikaiset tilapaistestit
 if __name__ == '__main__':
     vastaus = kysy_liukuluku('Anna luku', 100, 200)
     print(vastaus)
