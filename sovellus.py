@@ -11,6 +11,8 @@ import kysymys
 uusi = 'K'
 while True:
 
+    # TODO: Korvaa kaikki kysymykset kysymys.py:n kysy_liukuluku-funktiolla
+
     # Kysytään käyttäjältä painoa, kunnes saadaan järkevä arvo
     tapahtui_virhe = True
 
@@ -34,6 +36,7 @@ while True:
         else:
             print(tulokset[1])
 
+    # Tehdään kysymys modulin kysymys.py funktiota käyttämällä
     pituus = kysymys.kysy_liukuluku('Pituus (cm)', 100, 300)
 
     ''' # Kysytään käyttäjältä pituutta, kunnes saadaan järkevä arvo, huom sentteinä
