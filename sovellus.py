@@ -1,6 +1,7 @@
 # Tämä on painonhallintasovelluksen pääohjelma
 
 # Kirjastojen ja modulien käyttöönotot
+# TODO: Poista tarpeettomat modulit latauksista
 import sanity2
 import laskenta
 import kysymys

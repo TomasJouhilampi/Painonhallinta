@@ -1,4 +1,4 @@
-# Rutiineja tietojen kysymiseen käyttäjältä
+# RUTIINEJA TIETOJEN KYSYMISEKSI KÄYTTÄJÄLTÄ
 
 # Kirjastojen ja modulien lataukset
 import sanity2
@@ -32,16 +32,16 @@ def kysy_liukuluku(kysymys, alaraja, ylaraja):
             vastaus = tulokset[2]
 
             # Tehdään raja-arvotarkistus, virhetiedot muuttujaan tarkistusviesti
-            tarkistus_viesti = sanity2.rajatarkistus(vastaus, alaraja, ylaraja)
+            tarkistusviesti = sanity2.rajatarkistus(vastaus, alaraja, ylaraja)
             
             # Katsotaan onko arvo sallittujen rajojen sisällä tutkimalla virhekoodia
-            if tarkistus_viesti[0] == 0:
+            if tarkistusviesti[0] == 0:
                 tapahtui_virhe = False
                 luku = vastaus
 
             else:
                 # Jos raja-arvotarkistuksen virhekoodi ei ole 0, tulostetaan virheilmoitus
-                print(tarkistus_viesti[1])
+                print(tarkistusviesti[1])
 
         # Jos liukulukutarkistuksen virhekoodi ei ole 0, tulostetaan virheilmoitus    
         else:

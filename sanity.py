@@ -1,4 +1,6 @@
 # Moduli syötteen oikeellisuuden (sanity) tarkistamiseen
+# FIXME: Tämä moduli on vanhentunut. Korvattu modulilla sanity2.py. Poista seuraavasta julkaisusta!
+
 """Tarkistaa käyttäjän syötteen oikeellisuuden tarkistusfunktioiden avulla
 """
 
