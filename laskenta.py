@@ -16,14 +16,14 @@ def bmi(paino, pituus):
     painoindeksi = paino / (pituus/100) ** 2
     return painoindeksi
     
-# Aikuisen rasvaprosentti
+# Rasvaprosentti
 def rasvaprosentti(bmi, ika, sukupuoli):
-    """Laskee aikuisen henkilön kehon rasvaprosentin
+    """Laskee henkilön kehon rasvaprosentin
 
     Args:
         bmi (float): painoindeksi
         ika (float): ikä vuosina
-        sukupuoli ([type]): 1 - Miehet, 0 - Naiset
+        sukupuoli (int): 1 - Miehet, 0 - Naiset
 
     Returns:
         float: kehon rasvaprosentti
