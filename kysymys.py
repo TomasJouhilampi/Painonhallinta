@@ -24,7 +24,7 @@ def kysy_liukuluku(kysymys, alaraja, ylaraja):
         # Esitetään parametrina annettu kysymys ja tallennetaan vastaus (merkkijono) muuttujaan
         vastaus_str = input(kysymys + ' ')
 
-        # Tarkistetaan syötteen järkevyys, virhetiedot ja arvo listamuuttujaan tulokset
+        # Tarkistetaan syötteen järkevyys, virhetiedot ja arvo tallennetaan listamuuttujaan tulokset
         tulokset = sanity2.liukuluvuksi(vastaus_str)
 
         # Katsotaan onko virhekoodi 0, ja tallennetaan arvo muuttujaan vastaus
