@@ -5,7 +5,7 @@ import sanity2
 
 # Funktioden määrittelyt
 def kysy_liukuluku(kysymys, alaraja, ylaraja):
-    """Kysyy käyttäjä liukuluvun tai kokonaisluvun ja tarkistaa syötteen oikean tietotyypin ja suureden
+    """Kysyy käyttäjä liukuluvun tai kokonaisluvun ja tarkistaa syötteen oikean tietotyypin ja suuruuden
 
     Args:
         kysymys (str): Käyttäjälle esitettävä kysymys
