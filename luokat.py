@@ -20,6 +20,11 @@ class Henkilo:
         bmi = self.paino / (self.pituus / 100) ** 2
         return bmi
 
+    @staticmethod
+    def bmi(pituus, paino):
+        bmi = paino / (pituus/100)**2
+        return bmi
+
 class Aikuinen(Henkilo):
     """Aliluokka aikuiselle henkilölle, perii Henkilo-luokan ominaisuudet
     ja metodit
@@ -45,6 +50,12 @@ if __name__ == "__main__":
     mikaV2 = Aikuinen('Mika', 'Vainio', 171, 74, 59, 1, 70)
     print(mikaV2.etunimi, 'painoindeksi', mikaV2.painoindeksi())
     print(mikaV2.etunimi, 'rasvaprosentti', mikaV2.rasvaprosentti())
+
+    # Lasketaan painoindeksi staattisella metodilla
+    pituus = 171
+    paino = 75
+
+    print('Paino indeksi on ', Henkilo.bmi(pituus, paino))
 
 
     
