@@ -1,5 +1,6 @@
 # Kysymysmodulin testit
 
+<<<<<<< Updated upstream
 # Modulien ja kirjatojen lataukset
 import kysymys
 
@@ -14,3 +15,10 @@ def test_kysymys_ok():
 # Alle alarajan
 
 # Yli ylärajan
+=======
+# Modulien ja kirjastojen lataukset
+import kysymys
+
+#syöte on ok
+def test_kysymys_ok:()
+>>>>>>> Stashed changes
